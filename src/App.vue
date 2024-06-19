@@ -1,26 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+<img width="180" src="masterplop.png" alt="" /> 
+<h1>Formulario de Tarjeta de Crédito</h1>
+
+<CreditsCard />
+    
+  </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
+<script>/*Se importa componente CreditsCard desde archivo CardCredit.vue y se establece como un componente en el objeto exportado */
+import CreditsCard from './components/CardCredit.vue'
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components: {        /*Dentro de la propiedad components, se incluye el componente CreditsCard */
+    CreditsCard
+    
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+<style>  /*Se establece un estilo de fondo para el cuerpo de la pàgina y se centra el texto del elemento h1. */
+body{
+  background: linear-gradient(rgb(174, 117, 165), rgb(218, 113, 113));
+}
+h1{
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
